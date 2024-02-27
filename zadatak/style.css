@@ -1,0 +1,71 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 24px;
+  color: white; 
+  background-image: url(images/blur-clean.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Tahoma, sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  color: white; 
+}
+
+.rectangle {
+  width: 400px;
+  height: 300px;
+  background-color: rgba(204, 204, 204, 0.3);
+  opacity: 0.3;
+  margin: 30px;
+  border: 2px solid white;
+  border-width: 2px;
+  
+}
+.rectangle:first-of-type {
+  background-color: rgba(0, 0, 0, 0.6); 
+  opacity: 0; 
+  animation: slideInFromTop 1.5s ease-in-out forwards;
+ 
+}
+  
+
+.rectangle:nth-of-type(2) {
+  background-color: rgba(145, 28, 28, 0.6);
+  opacity: 0; 
+  animation: slideInFromTop 1.5s ease-in-out forwards 1.5s;
+  
+}
+
+.rectangle:nth-of-type(3) {
+  background-color: rgba(173, 118, 16, 0.6);
+  opacity: 0; 
+  animation: slideInFromTop 1.5s ease-in-out forwards 3s; 
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
